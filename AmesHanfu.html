@@ -20,6 +20,32 @@
     .star.active {
       color: gold;
     }
+
+
+    /* Collapse */
+    .collapsible {
+      background-color: #777;
+      color: white;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+    }
+    
+    .active, .collapsible:hover {
+      background-color: #555;
+    }
+    
+    .content {
+      padding: 0 18px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      background-color: #f1f1f1;
+    }
   </style>
   
   <head>
@@ -27,13 +53,18 @@
   </head>
   <body>
     <h1>形制</h1>
-    <h2>晋</h2>
+    <button class="collapsible"><h2>晋</h2></button>
+    <div class="content">
+      <p>dadada</p>
+    </div>
     <h2>唐</h2>
     <h2>宋</h2>
     <h2>明</h2>
     <h1>推荐店铺</h1>
     <h2><a href="https://shop102419025.taobao.com/">春下汉服工作室</a></h2>
+    
     价格：$$
+    
     质量：<div>
       <span class="star" data-value="1">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
     </div>
