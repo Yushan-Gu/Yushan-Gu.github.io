@@ -1,76 +1,80 @@
 <!DOCTYPE html>
 <html>
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-
-  <style>
-    .rating {
-      display: inline-block;
-    }
-
-    .star {
-      font-size: 25px;
-      color: gray;
-      cursor: pointer;
-    }
-
-    .star.active {
-      color: gold;
-    }
-
-
-    /* Collapse */
-    .collapsible {
-      background-color: #777;
-      color: white;
-      cursor: pointer;
-      padding: 18px;
-      width: 100%;
-      border: none;
-      text-align: left;
-      outline: none;
-      font-size: 15px;
-    }
-    
-    .active, .collapsible:hover {
-      background-color: #555;
-    }
-    
-    .content {
-      padding: 0 18px;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.2s ease-out;
-      background-color: #f1f1f1;
-    }
-  </style>
+  
   
   <head>
+    <style>
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 0px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: 0.4s;
+        }
+    
+        /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+        .active, .accordion:hover {
+            background-color: #ccc;
+        }
+    
+        /* Style the accordion panel. Note: hidden by default */
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            display: none;
+            overflow: hidden;
+        }
+      </style>
     <title>Ames汉服群 汉服新人指引</title>
   </head>
   <body>
     <h1>形制</h1>
-    <button class="collapsible"><h2>晋</h2></button>
-    <div class="content">
-      <p>dadada</p>
+    <button class="accordion"><h2>&nbsp&nbsp&nbsp晋</h2></button>
+    <div class="panel">
+        <p>bababa</p>
     </div>
-    <h2>唐</h2>
-    <h2>宋</h2>
-    <h2>明</h2>
+    <button class="accordion"><h2>&nbsp&nbsp&nbsp唐</h2></button>
+    <div class="panel">
+        <p>bababa</p>
+    </div>
+    <button class="accordion"><h2>&nbsp&nbsp&nbsp宋</h2></button>
+    <div class="panel">
+        <p>bababa</p>
+    </div>
+    <button class="accordion"><h2>&nbsp&nbsp&nbsp明</h2></button>
+    <div class="panel">
+        <p>bababa</p>
+    </div>
     <h1>推荐店铺</h1>
     <h2><a href="https://shop102419025.taobao.com/">春下汉服工作室</a></h2>
+    女装<br>
+    价格：$$<br>
+    质量：&#9733&#9733&#9733&#9733&#9734<br>
+    形制：&#9733&#9733&#9733&#9733&#9734
     
-    价格：$$
-    
-    质量：<div>
-      <span class="star" data-value="1">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-    </div>
     <h2><a href="https://shop548836381.taobao.com/">秋木木汉服</a></h2>
+    女装<br>
+    价格：$$<br>
+    质量：&#9733&#9733&#9733&#9733&#9734<br>
+    形制：&#9733&#9733&#9733&#9733&#9734
+
     <h2><a href="https://shop110087616.taobao.com/">四时欢喜 传统服饰</a></h2>
+    女装<br>
+    价格：$$<br>
+    质量：&#9733&#9733&#9733&#9733&#9734<br>
+    形制：&#9733&#9733&#9733&#9733&#9734
+    
     <h2><a href="https://shop372773297.taobao.com/">织造司</a></h2>
+    女装<br>
+    价格：$$$<br>
+    质量：&#9733&#9733&#9733&#9734&#9734<br>
+    质量：&#9733&#9733&#9733&#9734&#9734<br>
+    
     <h2><a href="https://shop143643855.taobao.com/">琉鱼汉服</a></h2>
     男装
     <h2><a href="https://shop432951547.taobao.com/">柏舟记汉服</a></h2>
@@ -92,5 +96,22 @@
     <h2><a href="https://shop120494615.taobao.com/">天汉骄阳汉服</a></h2>
     <h2><a href="https://shop57166645.taobao.com/">罗兰尼克唐装汉服禅意</a></h2>
     <h2><a href="https://shop101311694.taobao.com/">乌衣巷汉服</a></h2>
-  </body>
+  
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+              panel.style.display = "none";
+            } else {
+              panel.style.display = "block";
+            }
+          });
+        }
+    </script>
+    </body>
 </html>
