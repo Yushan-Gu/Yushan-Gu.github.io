@@ -87,7 +87,22 @@
     <h2><a href="https://shop57166645.taobao.com/">罗兰尼克唐装汉服禅意</a></h2>
     <h2><a href="https://shop101311694.taobao.com/">乌衣巷汉服</a></h2>
   
-    <script type="text/javascript" src="/AmesHanfu/Collapsible.js"></script>
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+      
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+    </script>
     
     </body>
 </html>
