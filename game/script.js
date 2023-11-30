@@ -1,12 +1,12 @@
 // Initialize Firebase
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_AUTH_DOMAIN",
-    databaseURL: "YOUR_DATABASE_URL",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_STORAGE_BUCKET",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID"
+    apiKey: "AIzaSyDRHV8hRE-TWDWdd3sTQiG-njGlgas3M6Y",
+  authDomain: "gameproj33.firebaseapp.com",
+  databaseURL: "https://gameproj33-default-rtdb.firebaseio.com",
+  projectId: "gameproj33",
+  storageBucket: "gameproj33.appspot.com",
+  messagingSenderId: "1096621210353",
+  appId: "1:1096621210353:web:c7517435d2747da6134750"
 };
 
 firebase.initializeApp(firebaseConfig);
