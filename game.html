@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Friend Messaging Page</title>
+</head>
+<body>
+
+<h1>Welcome to the Messaging Page!</h1>
+<p>Feel free to send a message below:</p>
+
+<form id="messageForm">
+    <label for="senderName">Your Name:</label><br>
+    <input type="text" id="senderName" name="senderName"><br>
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+    <input type="button" value="Send Message" onclick="sendMessage()">
+</form>
+
+<div id="messageDisplay">
+    <!-- Messages will appear here -->
+</div>
+
+<script>
+    function sendMessage() {
+        var senderName = document.getElementById("senderName").value;
+        var message = document.getElementById("message").value;
+        
+        var messageDisplay = document.getElementById("messageDisplay");
+        var messageElement = document.createElement("p");
+        messageElement.textContent = senderName + ": " + message;
+        
+        messageDisplay.appendChild(messageElement);
+        
+        // You can add code here to send the message to a server or store it in some way
+        // For now, it just displays on the page
+    }
+</script>
+
+</body>
+</html>
